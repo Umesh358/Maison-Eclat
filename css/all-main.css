@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* DESIGN SYSTEM */
+:root {
+    --clr-black: #111111;
+    --clr-white: #ffffff;
+    --clr-bg-cream: #fdf5ec;
+    --clr-bg-peach: #faebe1;
+    --clr-frame-beige: #e5cd9e;
+    --clr-frame-grey: #f8f5f0;
+    --clr-accent-gold: #c49a45;
+    --clr-text-grey: #555555;
+
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+    --spacing-sm: 1rem;
+    --spacing-md: 2.5rem;
+    --spacing-lg: 5rem;
+}
+
+/* =========================================
+   GLOBAL HEADER - NOW FULL WIDTH
+   ========================================= */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.global-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 6%;
+    background: var(--clr-white);
+    border-bottom: 1px solid #eaeaea;
+    z-index: 9999;
+}
+
+.nav-list, .utility-nav {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-list a, .utility-nav a {
+    text-decoration: none;
+    color: var(--clr-black);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover, .utility-nav a:hover {
+    color: #666;
+}
+
+.brand-logo {
+    text-decoration: none;
+    color: var(--clr-black);
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+/* =========================================
+   GLOBAL FOOTER
+   ========================================= */
+.global-footer {
+    background: var(--clr-black);
+    color: var(--clr-white);
+    padding: 5rem 6% 2rem;
+    margin-top: 5rem;
+}
+
+.footer-top {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.footer-newsletter {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer-newsletter p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.subscribe-form {
+    display: flex;
+    border-bottom: 1px solid var(--clr-white);
+    padding-bottom: 5px;
+    max-width: 400px;
+}
+
+.newsletter-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--clr-white);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.newsletter-input::placeholder { color: #888; }
+
+.btn-subscribe {
+    background: transparent;
+    border: none;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.footer-links-wrapper {
+    display: flex;
+    gap: 4rem;
+    flex: 2;
+    justify-content: flex-end;
+}
+
+.footer-heading {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-col a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footer-col a:hover {
+    color: var(--clr-white);
+}
+
+.footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 992px) {
+    .global-header { padding: 1.3rem 5%; }
+}
+
+@media (max-width: 768px) {
+    .global-header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 5%;
+    }
+    .nav-list, .utility-nav { gap: 1.8rem; justify-content: center; }
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-links-wrapper { justify-content: center; gap: 3rem; }
+}
+
+@media (max-width: 576px) {
+    .global-header { padding: 0.9rem 4%; }
+    .brand-logo { font-size: 1.65rem; }
+    .nav-list, .utility-nav { gap: 1.2rem; }
+}

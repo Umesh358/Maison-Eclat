@@ -1,0 +1,211 @@
+
+.womens-collection-main,
+.mens-collection-main,
+.accessories-collection-main {
+    margin-top: 85px;
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.collection-hero {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: var(--spacing-lg) 10%;
+    background-color: var(--clr-bg-cream);
+    min-height: 80vh;
+}
+
+.collection-hero-media {
+    flex: 1;
+    background-color: var(--clr-frame-beige);
+    padding: 2.5rem;
+}
+
+.collection-hero-media img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.collection-hero-text {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.collection-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.collection-description {
+    color: var(--clr-text-grey);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* =========================================
+   EDITORIAL SECTION
+   ========================================= */
+.collection-editorial {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 3rem;
+    padding: var(--spacing-lg) 5%;
+    background-color: var(--clr-bg-peach);
+    align-items: center;
+}
+
+.editorial-image {
+    background-color: var(--clr-frame-grey);
+    padding: 2rem;
+}
+
+.editorial-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.editorial-content {
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.editorial-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* =========================================
+   PRODUCT GRID
+   ========================================= */
+.product-grid-section {
+    padding: var(--spacing-lg) 5%;
+    background-color: var(--clr-white);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.product-image {
+    background-color: var(--clr-frame-grey);
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+    height: 480px;
+    display: block;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.product-description {
+    font-size: 0.85rem;
+    color: var(--clr-text-grey);
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    color: var(--clr-accent-gold);
+    font-weight: bold;
+}
+
+/* =========================================
+   GALLERY (MASONRY)
+   ========================================= */
+.collection-gallery {
+    padding: var(--spacing-lg) 5%;
+    background-color: var(--clr-white);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 350px;
+    gap: 1.5rem;
+}
+
+.gallery-grid figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--clr-frame-grey);
+    padding: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Masonry Layout - Desktop */
+.gallery-grid figure:nth-child(1) { grid-column: 1 / 3; grid-row: 1 / 3; }
+.gallery-grid figure:nth-child(2) { grid-column: 3 / 4; grid-row: 1 / 2; }
+.gallery-grid figure:nth-child(3) { grid-column: 3 / 4; grid-row: 2 / 3; }
+.gallery-grid figure:nth-child(4) { grid-column: 1 / 2; grid-row: 3 / 5; }
+.gallery-grid figure:nth-child(5) { grid-column: 2 / 3; grid-row: 3 / 4; }
+.gallery-grid figure:nth-child(6) { grid-column: 2 / 4; grid-row: 4 / 5; }
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================= */
+
+@media (max-width: 1200px) {
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+    .gallery-grid { grid-auto-rows: 320px; }
+}
+
+@media (max-width: 992px) {
+    .collection-hero {
+        flex-direction: column;
+        padding: var(--spacing-md) 8%;
+        gap: 2.5rem;
+        min-height: auto;
+    }
+    .collection-hero-media img { height: 420px; }
+    .collection-hero-text { padding-left: 0; text-align: center; }
+    .collection-title { font-size: 2.8rem; }
+
+    .collection-editorial { grid-template-columns: 1fr; gap: 2.5rem; }
+    .editorial-image img { height: 320px; }
+
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .product-image { height: 420px; }
+}
+
+@media (max-width: 768px) {
+    .collection-hero { padding: 4rem 5%; }
+    .collection-hero-media img { height: 380px; }
+    .collection-title { font-size: 2.4rem; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .product-image { height: 380px; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 280px; }
+    .gallery-grid figure:nth-child(n) { grid-column: auto; grid-row: auto; }
+    .gallery-grid figure:nth-child(1) { grid-column: 1 / -1; }
+}

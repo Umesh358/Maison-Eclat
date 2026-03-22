@@ -1,0 +1,53 @@
+.product-main {
+    margin-top: 85px;
+    padding: 5rem 8%;
+    background: var(--clr-bg-cream);
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-images img {
+    width: 100%;
+    border: 15px solid var(--clr-frame-beige);
+}
+
+.product-info h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-size: 2rem;
+    color: var(--clr-accent-gold);
+    margin: 1.5rem 0;
+}
+
+.add-to-bag {
+    background: var(--clr-black);
+    color: white;
+    padding: 1.2rem 3rem;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.add-to-bag:hover {
+    background: var(--clr-accent-gold);
+    color: var(--clr-black);
+}
+
+@media (max-width: 992px) {
+    .product-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}

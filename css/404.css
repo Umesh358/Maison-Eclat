@@ -1,0 +1,32 @@
+.error-main {
+    margin-top: 85px;
+    text-align: center;
+    padding: 8rem 5%;
+    background: var(--clr-bg-cream);
+}
+
+.error-title {
+    font-size: 8rem;
+    font-family: var(--font-heading);
+    color: var(--clr-accent-gold);
+    margin: 0;
+}
+
+.error-subtitle {
+    font-size: 1.8rem;
+    margin: 1rem 0 3rem;
+}
+
+.btn-home {
+    background: black;
+    color: white;
+    padding: 1.2rem 3rem;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.btn-home:hover {
+    background: var(--clr-accent-gold);
+    color: black;
+}
