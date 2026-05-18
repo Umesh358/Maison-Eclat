@@ -1,3 +1,3 @@
 # Maison-Eclat
 FEE project
-Credits - Umesh Sharma, Madhav Gupta, Soham Setia.
+Credits -> Umesh Sharma, Madhav Gupta, Soham Setia.
