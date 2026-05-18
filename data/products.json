@@ -1,0 +1,16 @@
+[
+    { "id": "w1", "category": "women", "name": "Silk Evening Couture Dress", "price": 2850, "image": "images/women/img4.webp" },
+    { "id": "w2", "category": "women", "name": "Cashmere Atelier Coat", "price": 3400, "image": "images/women/img5.webp" },
+    { "id": "w3", "category": "women", "name": "Structured Wool Blazer", "price": 1950, "image": "images/women/img6.webp" },
+    { "id": "w4", "category": "women", "name": "Runway Silk Gown", "price": 4200, "image": "images/women/img7.avif" },
+
+    { "id": "m1", "category": "men", "name": "Italian Wool Tailored Suit", "price": 4200, "image": "images/men/img4.avif" },
+    { "id": "m2", "category": "men", "name": "Double-Faced Cashmere Sweater", "price": 1850, "image": "images/men/img5.webp" },
+    { "id": "m3", "category": "men", "name": "Lambskin Biker Jacket", "price": 3950, "image": "images/men/img6.avif" },
+    { "id": "m4", "category": "men", "name": "Oxford Cotton Shirt", "price": 680, "image": "images/men/img7.jpg" },
+
+    { "id": "a1", "category": "accessories", "name": "Heritage Leather Tote", "price": 2850, "image": "images/accessories/img4.webp" },
+    { "id": "a2", "category": "accessories", "name": "100% Silk Twill Scarf", "price": 420, "image": "images/accessories/img5.avif" },
+    { "id": "a3", "category": "accessories", "name": "18K Gold Hoop Earrings", "price": 1650, "image": "images/accessories/img6.jpg" },
+    { "id": "a4", "category": "accessories", "name": "Double-Faced Cashmere Wrap", "price": 980, "image": "images/accessories/img7.avif" }
+]

@@ -5,23 +5,31 @@
 
 /* HERO */
 .about-hero {
-    position: relative;
+    /* 1. Flexbox replaces position: absolute */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Pushes text to the bottom */
+    padding: 0 10% 12% 10%; /* Controls the spacing naturally */
+
     height: 85vh;
     min-height: 650px;
-    overflow: hidden;
+
+    /* 2. The Magic Layering: Gradient on top, Image on bottom */
+    /* Note the ../ to step out of the css folder! */
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 60%),
+        url('../images/about/img1.webp');
+
+    /* 3. Perfect scaling no matter the screen size */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.about-hero-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .about-hero-text {
-    position: absolute;
-    bottom: 15%;
-    left: 10%;
     color: var(--clr-white);
+    /* Text shadow kept for extra crispness */
     text-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 

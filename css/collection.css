@@ -209,3 +209,26 @@
     .gallery-grid figure:nth-child(n) { grid-column: auto; grid-row: auto; }
     .gallery-grid figure:nth-child(1) { grid-column: 1 / -1; }
 }
+
+@media (max-width: 480px) {
+    /* 1. Shrink Hero Elements */
+    .collection-hero { padding: 2.5rem 5%; gap: 1.5rem; }
+    .collection-hero-media img { height: 300px; }
+    .collection-title { font-size: 2rem; }
+
+    /* 2. Shrink Editorial Elements */
+    .editorial-title { font-size: 1.8rem; }
+    .editorial-image img { height: 280px; }
+
+    /* 3. Drop Product Grid to 1 Column */
+    .product-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .product-image { height: 400px; padding: 1rem; }
+
+    /* 4. Kill the Masonry Gallery completely on mobile */
+    .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
+    .gallery-grid figure {
+        height: 350px;
+        grid-column: 1 / -1 !important; /* Overrides the desktop coordinates */
+        grid-row: auto !important;
+    }
+}

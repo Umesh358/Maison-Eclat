@@ -56,6 +56,13 @@
     font-weight: 300;
 }
 
+.hero-cta {
+    display: flex;
+    gap: 1.5rem; /* Creates a clean space between them on desktop */
+    justify-content: center;
+    flex-wrap: wrap; /* Allows them to wrap safely */
+}
+
 /* Buttons */
 .btn-primary {
     display: inline-block;
@@ -293,4 +300,17 @@
     .hero-title { font-size: 2.9rem; }
     .story-content { padding: 4rem 5%; }
     .story-image img { height: 360px; }
+
+    /* --- THE BUTTON STACK FIX --- */
+    .hero-cta {
+        flex-direction: column; /* Stacks the buttons vertically */
+        width: 100%;
+        max-width: 280px; /* Keeps them from looking ridiculously wide */
+        margin: 0 auto;
+        gap: 1rem;
+    }
+
+    .hero-cta .btn-primary {
+        width: 100%; /* Forces both buttons to be the exact same width */
+    }
 }

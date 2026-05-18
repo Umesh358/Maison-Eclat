@@ -1,0 +1,106 @@
+/* ==========================================
+   CART PAGE STYLES
+   ========================================== */
+
+/* Keep the cart centered and prevent it from stretching too wide on big screens */
+.cart-main {
+    max-width: 900px;
+    margin: 0 auto;
+
+    /* 150px pushes it safely below the fixed header, 5% on the sides */
+    padding: 150px 5% 4rem 5%;
+
+    min-height: 60vh;
+}
+
+.cart-main h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ==========================================
+   INDIVIDUAL CART ITEMS
+   ========================================== */
+
+.cart-item {
+    display: flex;
+    gap: 3rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eaeaea; /* Subtle divider between items */
+    align-items: center;
+}
+
+.cart-item-img {
+    width: 140px;
+    height: 190px;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex-grow: 1; /* Pushes the details to take up the remaining space */
+}
+
+.cart-item-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.cart-item-price {
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.cart-item-quantity {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================
+   BUTTONS & TOTALS
+   ========================================== */
+
+.remove-from-bag {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    padding: 0 0 2px 0;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.remove-from-bag:hover {
+    color: #888;
+    border-bottom-color: #888;
+}
+
+#cart-total-container {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    text-align: right; /* Aligns the total to the right side of the screen */
+}
+
+.cart-total-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* For when the user has 0 items */
+.empty-cart-message {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.empty-cart-message p {
+    margin-bottom: 2rem;
+    color: #666;
+    font-size: 1.1rem;
+}
